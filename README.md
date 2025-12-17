@@ -10,6 +10,8 @@ A single-page, mobile-friendly “Santa Cam” console:
 - Scrolling official-looking telemetry log
 - “Activate Remote Hardware” button that shows a connection/arming overlay, then returns to the camera + logs
 
+![Alt text](./SantaCamGUI.png)
+
 ## Run it
 
 ### Option A: simple local server (recommended)
