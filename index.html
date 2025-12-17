@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0f14" />
+  <title>SantaCam</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand__title">SantaCam</div>
+        <div class="brand__sub">Field Console • Mobile</div>
+      </div>
+      <div class="badge badge--ok" id="logStatus">STREAMING</div>
+    </header>
+
+    <main class="grid">
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <div class="panel__title">Camera Feed</div>
+            <div class="panel__hint" id="cameraHint">Live preview (if supported) or still capture</div>
+          </div>
+          <div class="badge" id="cameraStatus">IDLE</div>
+        </div>
+
+        <div class="camera">
+          <video id="video" class="camera__video" playsinline muted></video>
+          <img id="still" class="camera__still" alt="Captured frame" />
+          <canvas id="canvas" class="camera__canvas"></canvas>
+
+          <div class="camera__overlay" id="cameraOverlay" hidden>
+            <div class="camera__overlayTitle">Camera unavailable</div>
+            <div class="camera__overlayText">
+              Use “Take Still Photo” to open the phone camera and display the image.
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="btnStart" class="btn" type="button">Start Live Camera</button>
+          <button id="btnStop" class="btn" type="button" disabled>Stop</button>
+          <button id="btnSnap" class="btn" type="button" disabled>Snapshot</button>
+
+          <label class="btn btn--ghost" for="fileCapture">Take Still Photo</label>
+          <input id="fileCapture" class="srOnly" type="file" accept="image/*" capture="environment" />
+
+          <button id="btnClearStill" class="btn btn--ghost" type="button" disabled>Back to Live</button>
+        </div>
+
+        <div class="remote">
+          <div class="remote__row">
+            <label class="remote__check">
+              <input id="chkArduino" type="checkbox" />
+              <span>Arduino Sensor Board 2.1.5.0</span>
+            </label>
+
+            <button id="btnConnect" class="btn btn--primary" type="button">Connect</button>
+          </div>
+
+          <div class="remote__meta">
+            <span class="badge" id="remoteStatus">REMOTE: OFFLINE</span>
+            <span class="remote__hint">Select board, tap Connect, watch the log.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <div class="panel__title">Telemetry Log</div>
+            <div class="panel__hint">Rolling sensor + vision analysis output</div>
+          </div>
+          <div class="badge" id="sessionStatus">SESSION: READY</div>
+        </div>
+
+        <div id="log" class="log" aria-label="Telemetry log"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

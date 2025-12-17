@@ -1,0 +1,11 @@
+node_modules/
+.vscode/
+.DS_Store
+*.log
+.env
+__pycache__/
+*.pyc
+npm-debug.log*
+.DS_Store
+/*.zip
+/*.tar.gz
