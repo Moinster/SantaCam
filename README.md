@@ -173,4 +173,5 @@ void loop() {
 ## Making it real
 
 I've included a small diagram that can be printed for the SantaCam Sensor Board
+![Alt text](./SantaCamSensorBoard.jpeg)
 
