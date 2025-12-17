@@ -108,8 +108,8 @@ Reads light level from the LDR
 Prints friendly output to the Serial Monitor including "Camera Sync" information and "device firmware" heartbeat info.
 
 ## Arduino Code
-
-`// ===== Santa Cam Sensor Board 2.1.5.0 =====
+```bash
+// ===== Santa Cam Sensor Board 2.1.5.0 =====
 
 // Ultrasonic pins
 const int trigPin = 7;
@@ -167,7 +167,8 @@ void loop() {
   }
 
   delay(1000); // Sensor update rate
-}`
+}
+```
 
 ## Making it real
 
