@@ -109,7 +109,7 @@ Prints friendly output to the Serial Monitor including "Camera Sync" information
 
 ## Arduino Code
 
-// ===== Santa Cam Sensor Board 2.1.5.0 =====
+`// ===== Santa Cam Sensor Board 2.1.5.0 =====
 
 // Ultrasonic pins
 const int trigPin = 7;
@@ -167,7 +167,7 @@ void loop() {
   }
 
   delay(1000); // Sensor update rate
-}
+}`
 
 ## Making it real
 
